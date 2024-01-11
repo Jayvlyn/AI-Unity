@@ -4,9 +4,9 @@ using UnityEngine;
 
 public abstract class AIPerception : MonoBehaviour
 {
-    [SerializeField] string tagName = "";
-    [SerializeField] float distance = 1;
-    [SerializeField] float maxAngle = 45;
+    [SerializeField] protected string tagName = "";
+    [SerializeField] protected float distance = 1;
+    [SerializeField] protected float maxAngle = 45;
 
     public string TagName { get { return tagName; } }
     public float Distance { get { return distance; } }
