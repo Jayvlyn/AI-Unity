@@ -12,7 +12,10 @@ GameObject:
   - component: {fileID: 8425836388524980669}
   - component: {fileID: 3742169618421610865}
   - component: {fileID: 7711811185142467877}
+  - component: {fileID: -6569843562209757019}
+  - component: {fileID: -5058765902678336857}
   - component: {fileID: 4340762124618896928}
+  - component: {fileID: 7782040885043267249}
   m_Layer: 0
   m_Name: AutonomousAgent02
   m_TagString: Agent02
@@ -49,7 +52,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 3742169618421610865}
-  perception: {fileID: 7711811185142467877}
+  seekPerception: {fileID: 7711811185142467877}
+  fleePerception: {fileID: 0}
+  flockPerception: {fileID: -6569843562209757019}
 --- !u!114 &3742169618421610865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,6 +86,36 @@ MonoBehaviour:
   tagName: Agent01
   distance: 5
   maxAngle: 45
+--- !u!114 &-6569843562209757019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8725202569515966187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7a7542cda434a748bd4e8e318b2d18b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: Agent02
+  distance: 5
+  maxAngle: 180
+--- !u!114 &-5058765902678336857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8725202569515966187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7a7542cda434a748bd4e8e318b2d18b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: Agent03
+  distance: 5
+  maxAngle: 180
 --- !u!135 &4340762124618896928
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -102,6 +137,33 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.21769118
   m_Center: {x: -0, y: 0.18305504, z: 0.18}
+--- !u!54 &7782040885043267249
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8725202569515966187}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &9120965724471560431
 PrefabInstance:
   m_ObjectHideFlags: 0
