@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 7711811185142467877}
   - component: {fileID: -890372918193895191}
   - component: {fileID: 5428349769460880410}
+  - component: {fileID: 8562964261453232556}
   - component: {fileID: 4340762124618896928}
-  - component: {fileID: 4610680710008542859}
   m_Layer: 0
   m_Name: AutonomousAgent01
   m_TagString: Agent01
@@ -55,6 +55,7 @@ MonoBehaviour:
   seekPerception: {fileID: 7711811185142467877}
   fleePerception: {fileID: 5428349769460880410}
   flockPerception: {fileID: -890372918193895191}
+  obstaclePerception: {fileID: 8562964261453232556}
 --- !u!114 &3742169618421610865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,6 +87,9 @@ MonoBehaviour:
   tagName: Agent03
   distance: 5
   maxAngle: 45
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &-890372918193895191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,6 +105,9 @@ MonoBehaviour:
   tagName: Agent01
   distance: 5
   maxAngle: 180
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &5428349769460880410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,6 +123,28 @@ MonoBehaviour:
   tagName: Agent02
   distance: 5
   maxAngle: 180
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &8562964261453232556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8725202569515966187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70383d6bec963f94ab7d9c58aadb3963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: 
+  distance: 5
+  maxAngle: 80
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  numRaycast: 10
 --- !u!135 &4340762124618896928
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -137,33 +166,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.42520964
   m_Center: {x: -0.064543426, y: 0.39999998, z: 0.12999994}
---- !u!54 &4610680710008542859
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8725202569515966187}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 80
-  m_CollisionDetection: 0
 --- !u!1001 &6977003855726973616
 PrefabInstance:
   m_ObjectHideFlags: 0
