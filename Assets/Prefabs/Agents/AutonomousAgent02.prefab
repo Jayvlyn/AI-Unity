@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 3742169618421610865}
   seekPerception: {fileID: 7711811185142467877}
-  fleePerception: {fileID: 0}
+  fleePerception: {fileID: -5058765902678336857}
   flockPerception: {fileID: -6569843562209757019}
 --- !u!114 &3742169618421610865
 MonoBehaviour:
@@ -162,7 +162,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!1001 &9120965724471560431
 PrefabInstance:
