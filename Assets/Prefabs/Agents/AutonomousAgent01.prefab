@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7711811185142467877}
   - component: {fileID: -890372918193895191}
   - component: {fileID: 5428349769460880410}
-  - component: {fileID: 8562964261453232556}
+  - component: {fileID: -2066523060755661584}
   - component: {fileID: 4340762124618896928}
   m_Layer: 0
   m_Name: AutonomousAgent01
@@ -55,7 +55,7 @@ MonoBehaviour:
   seekPerception: {fileID: 7711811185142467877}
   fleePerception: {fileID: 5428349769460880410}
   flockPerception: {fileID: -890372918193895191}
-  obstaclePerception: {fileID: 8562964261453232556}
+  obstaclePerception: {fileID: -2066523060755661584}
 --- !u!114 &3742169618421610865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &8562964261453232556
+--- !u!114 &-2066523060755661584
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8725202569515966187}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70383d6bec963f94ab7d9c58aadb3963, type: 3}
+  m_Script: {fileID: 11500000, guid: 186d9a97e0e009f439694465d11c1d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tagName: 
@@ -145,6 +145,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   numRaycast: 10
+  radius: 0.5
 --- !u!135 &4340762124618896928
 SphereCollider:
   m_ObjectHideFlags: 0
