@@ -210,6 +210,66 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6695003846789372269, guid: bae468b3a6b9ea141967f3cfbe601352, type: 3}
   m_PrefabInstance: {fileID: 63101229}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &81311406
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 3e310db7ab7e91740a13f05bc701d283, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.038
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e310db7ab7e91740a13f05bc701d283, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1681242
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e310db7ab7e91740a13f05bc701d283, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.1088605
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e310db7ab7e91740a13f05bc701d283, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e310db7ab7e91740a13f05bc701d283, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e310db7ab7e91740a13f05bc701d283, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e310db7ab7e91740a13f05bc701d283, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e310db7ab7e91740a13f05bc701d283, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e310db7ab7e91740a13f05bc701d283, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3e310db7ab7e91740a13f05bc701d283, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3e310db7ab7e91740a13f05bc701d283, type: 3}
+      propertyPath: m_Name
+      value: The Boss
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e310db7ab7e91740a13f05bc701d283, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1385023688}
+  m_SourcePrefab: {fileID: 100100000, guid: 3e310db7ab7e91740a13f05bc701d283, type: 3}
 --- !u!4 &95542399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6695003846789372269, guid: bae468b3a6b9ea141967f3cfbe601352, type: 3}
@@ -5862,6 +5922,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4749940127516715229, guid: 748ca274b89873247873cee26d353629, type: 3}
   m_PrefabInstance: {fileID: 1369153636}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1385023686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3e310db7ab7e91740a13f05bc701d283, type: 3}
+  m_PrefabInstance: {fileID: 81311406}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1385023688
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385023686}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: a0ab1d5d68e7c2b4a9822f87daff9e27, type: 3}
+  m_Controller: {fileID: 9100000, guid: bcb8b5565faa449498a48e5da4483c9c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &1387677183 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6695003846789372269, guid: bae468b3a6b9ea141967f3cfbe601352, type: 3}
@@ -9151,3 +9237,4 @@ SceneRoots:
   - {fileID: 917732440725706842}
   - {fileID: 110829746}
   - {fileID: 1712954616}
+  - {fileID: 81311406}
