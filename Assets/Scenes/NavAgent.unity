@@ -208,8 +208,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240469358}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0012796021, y: -0.9943429, z: 0.104804195, w: -0.01722254}
-  m_LocalPosition: {x: -1.3287029, y: 1.4782066, z: 5.277214}
+  m_LocalRotation: {x: -0.000007388182, y: 0.8270235, z: -0.56216675, w: 0.00084705465}
+  m_LocalPosition: {x: -0.613383, y: 13.129715, z: 8.812962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1869,9 +1869,17 @@ PrefabInstance:
       value: NavAgent01
       objectReference: {fileID: 0}
     - target: {fileID: 6597446931484251751, guid: 1869938e472182a4fabf58ec35e3fdf1, type: 3}
+      propertyPath: endNode
+      value: 
+      objectReference: {fileID: 840877505}
+    - target: {fileID: 6597446931484251751, guid: 1869938e472182a4fabf58ec35e3fdf1, type: 3}
+      propertyPath: pathType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597446931484251751, guid: 1869938e472182a4fabf58ec35e3fdf1, type: 3}
       propertyPath: startNode
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1184700330}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
