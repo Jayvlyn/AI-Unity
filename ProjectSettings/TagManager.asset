@@ -16,10 +16,10 @@ TagManager:
   - UI
   - World
   - NavNode
-  - 
-  - 
-  - 
-  - 
+  - Terrain
+  - Player
+  - Ground1
+  - Ground2
   - 
   - 
   - 
