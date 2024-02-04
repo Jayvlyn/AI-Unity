@@ -21,7 +21,7 @@ public class AIInspector : EditorWindow
 			Camera camera = Camera.main;
 			GameObject go = Selection.activeGameObject;
 
-			if(go.TryGetComponent(out AINavAgent agent))
+			if(go.TryGetComponent(out AIAgent agent))
 			{
 				camera.transform.parent = agent.transform;
 				camera.transform.localPosition = Vector3.back * 5 + Vector3.up * 2;

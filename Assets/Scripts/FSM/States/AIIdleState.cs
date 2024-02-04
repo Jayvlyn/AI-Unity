@@ -10,16 +10,20 @@ public class AIIdleState : AIState
 
 	public override void OnEnter()
 	{
-		Debug.Log("idle enter");
+		//Debug.Log("idle enter");
 	}
 
 	public override void OnExit()
 	{
-		Debug.Log("idle exit");
+		//Debug.Log("idle exit");
 	}
 
 	public override void OnUpdate()
 	{
-		Debug.Log("idle update");
+		var enemies = agent.enemyPerception.GetGameObjects();
+		if (enemies.Length > 0)
+		{
+			agent.stateMachine.SetState(nameof(AIAttackState));
+		}
 	}
 }
