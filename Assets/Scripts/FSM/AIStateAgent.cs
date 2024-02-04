@@ -18,13 +18,16 @@ public class AIStateAgent : AIAgent
 		stateMachine.AddState(nameof(AIAttackState), new AIAttackState(this));
 		stateMachine.AddState(nameof(AIPatrolState), new AIPatrolState(this));
 		stateMachine.AddState(nameof(AIDeathState), new AIDeathState(this));
+		stateMachine.AddState(nameof(AIChaseState), new AIChaseState(this));
 
 		stateMachine.SetState(nameof(AIIdleState));
 	}
 
 	private void Update()
 	{
+		if (health <= 0) stateMachine.SetState(nameof(AIDeathState));
 
+		animator?.SetFloat("Speed", movement.Velocity.magnitude);
 		stateMachine.Update();
 	}
 
