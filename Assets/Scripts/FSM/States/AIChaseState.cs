@@ -19,7 +19,11 @@ public class AIChaseState : AIState
     public override void OnUpdate()
     {
         var enemies = agent.enemyPerception.GetGameObjects();
-        if(enemies.Length > 0)
+        if (enemies.Length > 2)
+        {
+            agent.stateMachine.SetState(nameof(AIDanceState));
+        }
+        else if (enemies.Length > 0)
         {
             var enemy = enemies[0];
             if(Vector3.Distance(agent.transform.position, enemy.transform.position) < 1.25f)

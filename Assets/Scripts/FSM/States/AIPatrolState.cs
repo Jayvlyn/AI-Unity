@@ -32,6 +32,7 @@ public class AIPatrolState : AIState
             agent.stateMachine.SetState(nameof(AIChaseState));
         }
 
+
     }
 
     public override void OnExit()

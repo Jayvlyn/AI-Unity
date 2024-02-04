@@ -171,6 +171,9 @@ PrefabInstance:
       addedObject: {fileID: 1373250380683374078}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4707880eb991c7249971099f654cc787, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 7198886189608089594}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4707880eb991c7249971099f654cc787, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 2848328866450670292}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4707880eb991c7249971099f654cc787, type: 3}
       insertIndex: -1
@@ -201,6 +204,7 @@ MonoBehaviour:
   movement: {fileID: 7236995661704207425}
   animator: {fileID: 4784097295673785550}
   enemyPerception: {fileID: 1373250380683374078}
+  friendPerception: {fileID: 7198886189608089594}
   health: 100
 --- !u!114 &7236995661704207425
 MonoBehaviour:
@@ -283,6 +287,26 @@ MonoBehaviour:
     m_Bits: 4294967295
   numRaycast: 5
   radius: 0.5
+--- !u!114 &7198886189608089594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2292186373513772046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 186d9a97e0e009f439694465d11c1d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: Agent03
+  distance: 1.25
+  maxAngle: 180
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  numRaycast: 7
+  radius: 1
 --- !u!54 &2848328866450670292
 Rigidbody:
   m_ObjectHideFlags: 0

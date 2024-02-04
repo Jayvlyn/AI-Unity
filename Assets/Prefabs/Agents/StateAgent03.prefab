@@ -1,5 +1,88 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5558816035382506928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7525050891728433932}
+  - component: {fileID: 5509792715977133763}
+  - component: {fileID: 8061910195473206200}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7525050891728433932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5558816035382506928}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.223, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1478495625551488692}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &5509792715977133763
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5558816035382506928}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8061910195473206200
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5558816035382506928}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 51a0a2fc07863654ca74af3ed1a0374d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &1373055334742638943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50,33 +133,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4707880eb991c7249971099f654cc787, type: 3}
       propertyPath: m_Name
-      value: StateAgent01
+      value: StateAgent03
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4707880eb991c7249971099f654cc787, type: 3}
       propertyPath: m_TagString
-      value: Agent01
+      value: Agent03
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 4707880eb991c7249971099f654cc787, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 4fb6506a6febd6941ae1829969e71427, type: 2}
     - target: {fileID: 5866666021909216657, guid: 4707880eb991c7249971099f654cc787, type: 3}
-      propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
-        'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
-        'mixamorig:LeftHandPinky2'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
-        'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform 'mixamorig:RightArm'\n\tTransform
-        'mixamorig:LeftLeg'\n\tand more ...\n\tFrom animation clip 'Chicken Dance'"
-      objectReference: {fileID: 0}
-    - target: {fileID: 5866666021909216657, guid: 4707880eb991c7249971099f654cc787, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4707880eb991c7249971099f654cc787, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7525050891728433932}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4707880eb991c7249971099f654cc787, type: 3}
       insertIndex: -1
@@ -86,20 +162,28 @@ PrefabInstance:
       addedObject: {fileID: 7236995661704207425}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4707880eb991c7249971099f654cc787, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 8785788339014614169}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4707880eb991c7249971099f654cc787, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 7568525336060545733}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4707880eb991c7249971099f654cc787, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1373250380683374078}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4707880eb991c7249971099f654cc787, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2973773646696413776}
+      addedObject: {fileID: -7515483580551960333}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4707880eb991c7249971099f654cc787, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2848328866450670292}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4707880eb991c7249971099f654cc787, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3004888402996277363}
+      addedObject: {fileID: 7542825663825473292}
   m_SourcePrefab: {fileID: 100100000, guid: 4707880eb991c7249971099f654cc787, type: 3}
+--- !u!4 &1478495625551488692 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4707880eb991c7249971099f654cc787, type: 3}
+  m_PrefabInstance: {fileID: 1373055334742638943}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2292186373513772046 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4707880eb991c7249971099f654cc787, type: 3}
@@ -120,7 +204,7 @@ MonoBehaviour:
   movement: {fileID: 7236995661704207425}
   animator: {fileID: 4784097295673785550}
   enemyPerception: {fileID: 1373250380683374078}
-  friendPerception: {fileID: 2973773646696413776}
+  friendPerception: {fileID: -7515483580551960333}
   health: 100
 --- !u!114 &7236995661704207425
 MonoBehaviour:
@@ -139,6 +223,28 @@ MonoBehaviour:
   maxForce: 5
   turnRate: 90
   navMeshAgent: {fileID: 7568525336060545733}
+--- !u!64 &8785788339014614169
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2292186373513772046}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!195 &7568525336060545733
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -173,15 +279,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186d9a97e0e009f439694465d11c1d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagName: Agent02
+  tagName: Agent04
   distance: 1.25
-  maxAngle: 120
+  maxAngle: 180
   layerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  numRaycast: 5
+  numRaycast: 7
   radius: 0.5
---- !u!114 &2973773646696413776
+--- !u!114 &-7515483580551960333
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -193,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186d9a97e0e009f439694465d11c1d08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagName: Agent03
+  tagName: Agent01
   distance: 1.25
   maxAngle: 180
   layerMask:
@@ -228,7 +334,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &3004888402996277363
+--- !u!136 &7542825663825473292
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
