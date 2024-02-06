@@ -2,21 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIAttackState : AIState
+public class AIWaveState : AIState
 {
 	float timer = 0;
 
-	public AIAttackState(AIStateAgent agent) : base(agent)
+	public AIWaveState(AIStateAgent agent) : base(agent)
 	{
 	}
 
 	public override void OnEnter()
 	{
-		agent.movement.Stop();
-		agent.movement.Velocity = Vector3.zero;
-        agent.animator?.SetTrigger("Attack");
-		timer = Time.time + 2;
-    }
+		agent.animator?.SetTrigger("Wave");
+		timer = Time.time + 5;
+	}
 
 	public override void OnUpdate()
 	{

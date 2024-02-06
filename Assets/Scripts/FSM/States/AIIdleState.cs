@@ -28,13 +28,21 @@ public class AIIdleState : AIState
 
 		var enemies = agent.enemyPerception.GetGameObjects();
 		var friends = agent.friendPerception.GetGameObjects();
-		if(friends.Length > 0)
+		if(friends.Length > 1)
+		{
+			agent.stateMachine.SetState(nameof(AIDance2State));
+		}
+		else if(friends.Length > 0)
 		{
 			agent.stateMachine.SetState(nameof(AIDanceState));
 		}
 		else if (enemies.Length > 0)
 		{
 			agent.stateMachine.SetState(nameof(AIAttackState));
+		}
+		else
+		{
+			agent.stateMachine.SetState(nameof(AIWaveState));
 		}
 	}
 }
