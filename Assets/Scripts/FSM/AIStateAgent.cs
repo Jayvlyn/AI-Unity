@@ -22,6 +22,8 @@ public class AIStateAgent : AIAgent
 
 	private void Start()
 	{
+		health.value = 100;
+
 		// add states to state machine
 		stateMachine.AddState(nameof(AIIdleState), new AIIdleState(this));
 		stateMachine.AddState(nameof(AIAttackState), new AIAttackState(this));
@@ -54,6 +56,17 @@ public class AIStateAgent : AIAgent
 		if (health <= 0) stateMachine.SetState(nameof(AIDeathState));
 
 		animator?.SetFloat("Speed", movement.Velocity.magnitude);
+
+		// Check for transitions
+		foreach (var transition in stateMachine.CurrentState.transitions)
+		{
+			if (transition.ToTransition())
+			{
+				stateMachine.SetState(transition.nextState);
+				break;
+			}
+		}
+
 		stateMachine.Update();
 	}
 
