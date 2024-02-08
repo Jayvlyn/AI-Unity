@@ -20,6 +20,7 @@ public class AIChaseState : AIState
 
     public override void OnEnter()
     {
+        agent.movement.Resume();
         initialSpeed = agent.movement.maxSpeed;
         agent.movement.maxSpeed *= 2;
     }

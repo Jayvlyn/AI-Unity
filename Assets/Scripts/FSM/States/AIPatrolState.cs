@@ -19,6 +19,7 @@ public class AIPatrolState : AIState
 
 	public override void OnEnter()
 	{
+		agent.movement.Resume();
 		var navNode = AINavNode.GetRandomAINavNode();
 		destination = navNode.transform.position;
 	}
