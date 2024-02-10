@@ -92,7 +92,6 @@ public class AIStateAgent : AIAgent
 
 	public void Attack()
 	{
-		Debug.Log("Attack!");
 		// check for collision with surroundings
 		var colliders = Physics.OverlapSphere(transform.position, 1);
 		foreach (var collider in colliders)
