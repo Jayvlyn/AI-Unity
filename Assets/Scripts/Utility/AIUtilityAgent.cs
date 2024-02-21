@@ -89,7 +89,7 @@ public class AIUtilityAgent : AIAgent
 		movement.MoveTowards(utilityObject.transform.position);
 
 		// wait until at destination position
-		yield return new WaitUntil(() => Vector3.Distance(transform.position, movement.Destination) < 1);
+		yield return new WaitUntil(() => Vector3.Distance(transform.position, movement.Destination) < 2);
 
 		// play animation
 		animator.SetBool(utilityObject.animationName, true);

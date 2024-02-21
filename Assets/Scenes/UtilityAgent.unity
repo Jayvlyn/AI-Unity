@@ -1059,7 +1059,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6140357024682853805, guid: 8dd85065c9076cf4d9bd294fcca28d3b, type: 3}
       propertyPath: m_Name
-      value: Hunger
+      value: Bladder
       objectReference: {fileID: 0}
     - target: {fileID: 6782924898795825662, guid: 8dd85065c9076cf4d9bd294fcca28d3b, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2097,7 +2097,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   decayRate: 7
   initalInput: 1
-  meter: {fileID: 1840849946}
+  meter: {fileID: 2060249245}
 --- !u!1001 &1701267461
 PrefabInstance:
   m_ObjectHideFlags: 0
