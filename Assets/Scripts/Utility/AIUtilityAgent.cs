@@ -25,11 +25,16 @@ public class AIUtilityAgent : AIAgent
 		get
 		{
 			// Total up total motives (desires) of all needs
+			float totalMotives = 0;
+            foreach (var need in needs)
+            {
+				totalMotives += need.motive;
+            }
 
-			// Calculate happiness level based on the average fulfillment of needs
-			// The lower the total motives (desires), the happier the agent
-			// If the agent has a high amount of desires then they are unhappy (unfulfilled)
-			return 0; // 1 - (divide total motives by number of needs to get average)
+            // Calculate happiness level based on the average fulfillment of needs
+            // The lower the total motives (desires), the happier the agent
+            // If the agent has a high amount of desires then they are unhappy (unfulfilled)
+            return 1 - totalMotives / needs.Length; // 1 - (divide total motives by number of needs to get average)
 		}
 	}
 
@@ -43,33 +48,37 @@ public class AIUtilityAgent : AIAgent
 	{
 		needs ??= GetComponentsInChildren<AIUtilityNeed>();
 	}
-		
-	void Update()
-	{
-		animator.SetFloat("Speed", movement.Velocity.magnitude);
 
-		// check if not using utility object, if not look for one to use
-		if (activeUtilityObject == null) 
-		{ 
-			var gameObjects = perception.GetGameObjects();
+    void Update()
+    {
+        animator.SetFloat("Speed", movement.Velocity.magnitude);
 
-			// get utility objects
-			var utilityObjects = gameObjects.GetComponents<AIUtilityObject>();
+        // check if not using utility object, if not look for one to use
+        if (activeUtilityObject == null)
+        {
+            var gameObjects = perception.GetGameObjects();
 
-			// ** set active utility object to utility object with the hightest score **
-			// iterate through utility objects
-			//		if utility score is > score threshold and score is higher than currect active utility object
-			//			set active utility object to utility object
+            // get utility objects
+            var utilityObjects = gameObjects.GetComponents<AIUtilityObject>();
 
-			// start active utility object usage
-			if (activeUtilityObject != null) 
-			{
-				StartCoroutine(UseUtilityCR(activeUtilityObject));
-			}
-		}
-	}
+            // ** set active utility object to utility object with the hightest score **
+            foreach (var utilityObject in utilityObjects)
+            {
+                utilityObject.score = GetUtilityScore(utilityObject);
+                if (utilityObject.score > scoreThreshold && (activeUtilityObject == null || utilityObject.score > activeUtilityObject.score))
+                {
+                    activeUtilityObject = utilityObject;
+                }
+            }
+            // start active utility object usage
+            if (activeUtilityObject != null)
+            {
+                StartCoroutine(UseUtilityCR(activeUtilityObject));
+            }
+        }
+    }
 
-	private void LateUpdate()
+    private void LateUpdate()
 	{
 		meter.value = happiness;
 	}
@@ -77,17 +86,22 @@ public class AIUtilityAgent : AIAgent
 	IEnumerator UseUtilityCR(AIUtilityObject utilityObject)
 	{
 		// move to utility position
-		
+		movement.MoveTowards(utilityObject.transform.position);
+
 		// wait until at destination position
-		
+		yield return new WaitUntil(() => Vector3.Distance(transform.position, movement.Destination) < 1);
+
 		// play animation
-		
+		animator.SetBool(utilityObject.animationName, true);
+
 		// wait duration
-		
+		yield return new WaitForSeconds(utilityObject.duration);
+
 		// stop animation
-		
-		// apply utility
-		ApplyUtility(utilityObject);
+		animator.SetBool(utilityObject.animationName, false);
+
+        // apply utility
+        ApplyUtility(utilityObject);
 
 		// set active utility object to null (done using)
 		activeUtilityObject = null;
@@ -104,6 +118,7 @@ public class AIUtilityAgent : AIAgent
 			if (need == null) continue;
 
 			// apply effector change to input
+			need.input += effector.change;
 		}
 	}
 
