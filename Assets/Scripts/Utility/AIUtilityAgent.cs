@@ -31,11 +31,21 @@ public class AIUtilityAgent : AIAgent
 				totalMotives += need.motive;
             }
 
+
             // Calculate happiness level based on the average fulfillment of needs
             // The lower the total motives (desires), the happier the agent
             // If the agent has a high amount of desires then they are unhappy (unfulfilled)
-            return 1 - totalMotives / needs.Length; // 1 - (divide total motives by number of needs to get average)
-		}
+            float happiness = 1 - totalMotives / needs.Length;
+
+            if (happiness < 0.4)
+			{
+				movement.Stop();
+				animator.SetTrigger("Death");
+
+			}
+
+            return happiness; // 1 - (divide total motives by number of needs to get average)
+        }
 	}
 
 	private void OnValidate()
